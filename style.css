@@ -1,0 +1,24 @@
+h1{
+    font-family: fantasy;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #e74c13;
+    color: #040100;
+    min-height: 20px;
+}
+body{
+    background-image: url(./cropped.jpeg);
+}
+table{
+    text-align: center;
+    min-height: 60%;
+}
+
+h2{
+    font-size: 12px;
+    font-family: fantasy;
+    float: right;
+}
+.boldi{
+    font-weight: bold;
+}

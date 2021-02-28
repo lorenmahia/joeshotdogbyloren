@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device.width">
+        <meta name="Author" content="Loren Mahia(lmahia01)">
+        <title>Joe's Hotdogs </title>
+        <script>
+            var arr = prompt("Enter the number of hotdogs($3.25), French Fries($2.00 each) and Drinks($1.50 each) separated by commas ").split(",");
+            var hotdog_total = 3.25 * arr[0];
+            hotdog_total = +hotdog_total.toFixed(2);
+            function round (int1){
+                int1 = +int1.toFixed(2);
+                return int1;
+            }
+            var fries_total = 2* arr[1];
+            fries_total = round(fries_total);
+            var drinks_total = 1.5* arr[2];
+            drinks_total = round(drinks_total)
+            var total = hotdog_total + fries_total + drinks_total;
+            total = round(total);
+            var discount = (1 - 0.9);
+            discount = round(discount);
+            var tax = (1 + 0.0625);
+            total_disc = total;
+            if(total > 20){
+                total_disc = total * (1-discount); 
+            }
+            var final = total_disc * (tax);
+            final = round(final);
+        </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+     <body>
+         <h1>Joe's Hotdogs</h1>
+         <p>The following is your order, Thank you for dining at Joe's Hotdogs</p>
+         <table>
+             <tr>
+                 <th>Items</th>
+                 <th>Totals</th>
+             </tr>
+             <tr>
+                 <td>Hotdogs</td>
+                 <td><script>document.write(hotdog_total)</script></td>
+             </tr>
+             <tr>
+                 <td>French Fries</td>
+                 <td><script>document.write(fries_total)</script></td>
+             </tr>
+             <tr>
+                 <td>Drinks</td>
+                 <td><script>document.write(drinks_total)</script></td>
+             </tr>
+             <tr>
+                 <td>Subtotal</td>
+                 <td><script>document.write(total)</script></td>
+             </tr>
+             <tr>
+                 <td>Discount(items above $20)</td>
+                 <td><script>document.write(100*discount)</script>%</td>
+             </tr>
+             <tr>
+                 <td>Tax</td>
+                 <td><script>document.write(100*(tax - 1))</script>%</td>
+             </tr>
+             <tr class="boldi">
+                 <td>Total</td>
+                 <td><script>document.write(final)</script></td>
+             </tr>
+         </table>
+         <section>
+             <h2>Designed by Loren Mahia 2021</h2>
+         </section>
+     </body>
+</html>
